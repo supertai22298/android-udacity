@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">About Me</string>
+    <string name="name">Nguyễn Văn Tài</string>
+    <string name="yellow_star">Yellow Star</string>
+    <string name="bio_text">Tại bất kỳ thời điểm nào trong quá trình, người dùng có thể bị gián đoạn bởi một cuộc gọi điện thoại hoặc thông báo. Sau khi hành động vì sự gián đoạn này, người dùng hy vọng có thể quay lại và tiếp tục quá trình chia sẻ ảnh này. Hành vi nhảy ứng dụng này là phổ biến trên các thiết bị di động, vì vậy ứng dụng của bạn phải xử lý các luồng này một cách chính xác.
+
+Hãy nhớ rằng các thiết bị di động cũng bị hạn chế về tài nguyên, vì vậy bất cứ lúc nào, hệ điều hành có thể giết chết một số quy trình ứng dụng để nhường chỗ cho các thiết bị mới.
+
+Với các điều kiện của môi trường này, các thành phần ứng dụng của bạn có thể được khởi chạy riêng lẻ và không theo thứ tự, và hệ điều hành hoặc người dùng có thể phá hủy chúng bất cứ lúc nào. Vì các sự kiện này không thuộc quyền kiểm soát của bạn, bạn không nên lưu trữ bất kỳ dữ liệu hoặc trạng thái ứng dụng nào trong các thành phần ứng dụng của mình và các thành phần ứng dụng của bạn không nên phụ thuộc lẫn nhau.
+    \n\n\n</string>
+    <string name="what_is_your_nickname">What\'s your Nickname?</string>
+</resources>
