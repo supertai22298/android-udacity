@@ -30,6 +30,10 @@ import androidx.lifecycle.LifecycleObserver
 import com.example.android.dessertpusher.databinding.ActivityMainBinding
 import timber.log.Timber
 
+public const val KEY_REVENUE = "key_revenue"
+public const val KEY_DESSERT_SOLD = "key_dessert_sold"
+public const val KEY_DESSERT_TIMER = "key_dessert_timer"
+
 class MainActivity : AppCompatActivity(), LifecycleObserver {
 
     private var revenue = 0
@@ -75,11 +79,15 @@ class MainActivity : AppCompatActivity(), LifecycleObserver {
         binding.dessertButton.setOnClickListener {
             onDessertClicked()
         }
-
+        dessertTimer = DessertTimer(this.lifecycle)
+        if (savedInstanceState != null) {
+            revenue = savedInstanceState.getInt(KEY_REVENUE, 0)
+            dessertsSold = savedInstanceState.getInt(KEY_DESSERT_SOLD, 0)
+            dessertTimer.secondsCount = savedInstanceState.getInt(KEY_DESSERT_TIMER)
+        }
         // Set the TextViews to the right values
         binding.revenue = revenue
         binding.amountSold = dessertsSold
-        dessertTimer = DessertTimer(this.lifecycle)
 
         // Make sure the correct dessert is showing
         binding.dessertButton.setImageResource(currentDessert.imageId)
@@ -91,7 +99,7 @@ class MainActivity : AppCompatActivity(), LifecycleObserver {
     private fun onDessertClicked() {
 
         // Update the score
-        revenue += currentDessert.price
+        this.revenue += currentDessert.price
         dessertsSold++
 
         binding.revenue = revenue
@@ -150,6 +158,16 @@ class MainActivity : AppCompatActivity(), LifecycleObserver {
             R.id.shareMenuButton -> onShare()
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.apply {
+            putInt(KEY_REVENUE, revenue)
+            putInt(KEY_DESSERT_SOLD, dessertsSold)
+            putInt(KEY_DESSERT_TIMER, dessertTimer.secondsCount)
+        }
+        Timber.i("onSaveInstanceState Called")
     }
 
     override fun onStart() {
