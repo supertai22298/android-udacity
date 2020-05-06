@@ -17,6 +17,7 @@
 package com.example.android.guesstheword.screens.game
 
 import android.os.Bundle
+import android.text.format.DateUtils
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -35,7 +36,6 @@ import com.example.android.guesstheword.databinding.GameFragmentBinding
  * Fragment where the game is played
  */
 class GameFragment : Fragment() {
-
 
     private lateinit var viewModel: GameViewModel
 
@@ -72,6 +72,9 @@ class GameFragment : Fragment() {
                 gameFinished()
                 viewModel.onGameFinished()
             }
+        })
+        viewModel.currentTime.observe(this, Observer { newCurrentTime ->
+            binding.timerText.text = newCurrentTime.toInt().toString()
         })
         return binding.root
 
