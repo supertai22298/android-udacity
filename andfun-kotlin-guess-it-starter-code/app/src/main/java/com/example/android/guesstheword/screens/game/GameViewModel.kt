@@ -5,6 +5,7 @@ import android.text.format.DateUtils
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 
 class GameViewModel : ViewModel() {
@@ -40,20 +41,25 @@ class GameViewModel : ViewModel() {
     private var _currentTime = MutableLiveData<Long>()
     val currentTime: LiveData<Long> get() = _currentTime
 
+    val curentTimeString = Transformations.map(currentTime) { time ->
+        DateUtils.formatElapsedTime(time)
+    }
+
     init {
         _eventGameFinish.value = false
         resetList()
         nextWord()
         _score.value = 0
-        _currentTime.value = 10
+        _currentTime.value = COUNTDOWN_TIME
         timer = object : CountDownTimer(COUNTDOWN_TIME, ONE_SECOND) {
 
             override fun onTick(millisUntilFinished: Long) {
-                _currentTime.value = _currentTime.value?.minus(1)
+                _currentTime.value = (millisUntilFinished / ONE_SECOND)
             }
 
             override fun onFinish() {
-               _eventGameFinish.value = true
+                _currentTime.value = DONE
+                _eventGameFinish.value = true
             }
         }
         timer.start()
