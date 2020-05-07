@@ -18,7 +18,7 @@ class GameViewModel : ViewModel() {
         const val ONE_SECOND = 1000L
 
         // This is the total time of the game
-        const val COUNTDOWN_TIME = 60000L
+        const val COUNTDOWN_TIME = 10000L
     }
 
     // The current word
@@ -45,7 +45,7 @@ class GameViewModel : ViewModel() {
         resetList()
         nextWord()
         _score.value = 0
-        _currentTime.value = 60
+        _currentTime.value = 10
         timer = object : CountDownTimer(COUNTDOWN_TIME, ONE_SECOND) {
 
             override fun onTick(millisUntilFinished: Long) {
