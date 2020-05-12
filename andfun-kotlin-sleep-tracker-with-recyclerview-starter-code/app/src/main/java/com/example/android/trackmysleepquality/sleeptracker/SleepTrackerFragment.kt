@@ -63,13 +63,13 @@ class SleepTrackerFragment : Fragment() {
 
         binding.sleepTrackerViewModel = sleepTrackerViewModel
 
-        val adapter = SleepNightAdapter(SleepNightAdapter.SleepNightListener { nightId ->
+        val adapter = SleepNightAdapter(SleepNightListener { nightId ->
             sleepTrackerViewModel.onSleepNightClicked(nightId)
         })
 
         sleepTrackerViewModel.nights.observe(this, Observer {
             it?.let {
-                adapter.submitList(it)
+                adapter.addHeaderAndSubmitList(it)
             }
         })
         binding.sleepList.adapter = adapter
