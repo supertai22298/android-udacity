@@ -26,6 +26,10 @@ import java.lang.Exception
 
 class RefreshDataWork(appContext: Context, params: WorkerParameters) : CoroutineWorker(appContext, params) {
 
+    companion object {
+        const val WORK_NAME: String = "RefreshDataWorker"
+    }
+
     override suspend fun doWork(): Result {
         val database = getDatabase(applicationContext)
         val repository = VideosRepository(database)
