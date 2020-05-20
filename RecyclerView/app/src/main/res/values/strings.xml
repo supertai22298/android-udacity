@@ -3,4 +3,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name_of_student">Name of Student</string>
+    <string name="age_of_student">Age of Student</string>
+    <string name="image_of_student">Image of Student</string>
 </resources>
