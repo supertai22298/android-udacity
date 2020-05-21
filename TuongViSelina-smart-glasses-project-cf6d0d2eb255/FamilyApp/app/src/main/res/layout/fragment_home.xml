@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.main.home.HomeFragment">
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mv_map_view"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="16dp"
+        android:layout_margin="12dp"
+        android:layout_alignParentEnd="true">
+        <RelativeLayout
+            android:id="@+id/btn_notifications"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_gradient_radius"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_notifications_black_24dp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_alignTop="@+id/img_notification"
+                android:layout_alignEnd="@+id/img_notification"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="2dp"
+                android:src="@drawable/bg_circle_red" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_maker_info"
+        android:layout_width="200dp"
+        android:animateLayoutChanges="true"
+        android:visibility="gone"
+        android:background="@drawable/bg_marker_info"
+        android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ic_image"
+            android:layout_width="80dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ic_user"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="2dp"
+            android:layout_height="80dp"/>
+        <androidx.recyclerview.widget.RecyclerView
+            app:layout_constraintTop_toBottomOf="@+id/ic_image"
+            android:id="@+id/list_glasses"
+            android:layout_width="match_parent"
+            android:layout_marginTop="30dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_open_glasses_list"
+        android:layout_width="24dp"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:layout_toEndOf="@+id/layout_maker_info"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_marker_info_expandable">
+
+        <View
+            android:layout_width="11dp"
+            android:layout_height="50dp"
+            android:background="@drawable/btn_blue" />
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btn_finder_location"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="16dp"
+        android:elevation="4dp"
+        android:src="@drawable/ic_directions_24dp"
+        android:background="@drawable/bg_circle_white"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/white"/>
+</RelativeLayout>

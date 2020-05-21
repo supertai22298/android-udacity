@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "646996530093",
+    "firebase_url": "https://smartglasses-cb197.firebaseio.com",
+    "project_id": "smartglasses-cb197",
+    "storage_bucket": "smartglasses-cb197.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:646996530093:android:62c8805531f8585999c724",
+        "android_client_info": {
+          "package_name": "com.example.familyapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "646996530093-h7eqgomr38ii6c9g4etcrdeijomfah6g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDG5am1Rn2T_yKOpmyL7jJU_BYVoCj80eU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "646996530093-h7eqgomr38ii6c9g4etcrdeijomfah6g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/header_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="12dp">
+
+        <View
+            android:id="@+id/bg"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/bg_gradient" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="24dp"
+            android:text="@string/title_group"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="150dp"
+        android:layout_height="36dp"
+        android:layout_below="@+id/header_container"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="-28dp"
+        android:layout_toStartOf="@+id/view_center"
+        app:cardBackgroundColor="@color/transparent"
+        app:cardElevation="18dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_my_group"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_tab"
+            android:gravity="center"
+            android:text="@string/btn_my_group"
+            android:textColor="@color/tab_text_color"
+            android:textSize="13sp" />
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:id="@+id/view_center"
+        android:layout_width="12dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/header_container"
+        android:layout_centerHorizontal="true" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="150dp"
+        android:layout_height="36dp"
+        android:layout_below="@+id/header_container"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="-28dp"
+        android:layout_toEndOf="@+id/view_center"
+        app:cardBackgroundColor="@color/transparent"
+        app:cardElevation="18dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_request_join_group"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_tab"
+            android:text="@string/btn_request_join_group"
+            android:textColor="@color/tab_text_color"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_group_info" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager_group"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_center"
+        android:layout_marginTop="16dp" />
+
+</RelativeLayout>

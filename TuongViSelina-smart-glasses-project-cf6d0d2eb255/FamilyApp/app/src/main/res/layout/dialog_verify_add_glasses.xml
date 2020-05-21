@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="40dp"
+        app:cardElevation="0dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        app:cardBackgroundColor="@color/colorAccent"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="8dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/tv_group_character"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="14dp"
+            android:src="@drawable/ic_3d_glasses" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/bg_dialog"
+        android:padding="16dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:gravity="center"
+            android:text="@string/hint_glass_id_verify"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edt_code"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:maxLength="4"
+            android:inputType="number"
+            android:alpha="0.0"
+            android:background="@null"
+            app:layout_constraintTop_toTopOf="@+id/list_codes"
+            app:layout_constraintStart_toStartOf="@+id/list_codes"
+            app:layout_constraintEnd_toEndOf="@+id/list_codes"
+            app:layout_constraintBottom_toBottomOf="@+id/list_codes"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_codes"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="24dp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_confirm"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="32dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_blue"
+            android:text="@string/btn_confirm"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/list_codes" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

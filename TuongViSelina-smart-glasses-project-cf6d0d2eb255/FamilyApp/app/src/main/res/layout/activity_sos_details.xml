@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.main.home.HomeFragment">
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mv_map_view"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:elevation="4dp"
+        android:layout_above="@+id/view_pager"
+        android:layout_margin="12dp"
+        android:src="@drawable/ic_back"
+        android:background="@drawable/bg_circle_white"
+        android:textColor="@color/white" />
+
+    <include layout="@layout/view_glasses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/view_center"/>
+
+    <View
+        android:id="@+id/view_center"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true" />
+    
+    <com.wang.avi.AVLoadingIndicatorView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:translationY="5dp"
+        app:indicatorColor="@color/red"
+        app:indicatorName="BallScaleMultipleIndicator" />
+</RelativeLayout>

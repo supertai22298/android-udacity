@@ -1,0 +1,157 @@
+<resources>
+
+    <!--Title-->
+    <string name="app_name">Kính Thông Minh</string>
+    <string name="title_home">TRANG CHỦ</string>
+    <string name="title_group">Nhóm</string>
+    <string name="title_notifications">THÔNG BÁO</string>
+    <string name="title_account">QUẢN LÍ TÀI KHOẢN</string>
+    <string name="title_glasses">Kính</string>
+    <string name="title_member_details">THÔNG TIN THÀNH VIÊN</string>
+    <string name="title_invite_member">Thêm Thành Viên</string>
+    <string name="title_register">ĐĂNG KÝ</string>
+    <string name="title_signin">ĐĂNG NHẬP</string>
+    <string name="title_glass_view">TÊN KÍNH</string>
+    <string name="title_confirm">XÁC NHẬN</string>
+    <string name="title_addglass">Liên Kết Kính</string>
+    <string name="title_glass_details">Thông Tin Kính</string>N
+    <string name="title_join_group">TÌM NHÓM</string>
+    <string name="title_profile">CHỈNH SỬA THÔNG TIN</string>
+    <string name="title_group_details">Thông Tin Nhóm</string>
+    <string name="title_change_role">Đổi Vai Trò</string>
+    <string name="title_create_group">Thêm Nhóm</string>
+    <string name="title_update_profile">Cập nhật hồ sơ</string>
+    <string name="title_update_group">Sửa tên nhóm</string>
+    <!--Notification-->
+    <string name="notify_glasses_name">Kính [%s]</string>
+    <string name="notify_sos_title">Thông báo nguy hiểm!</string>
+    <string name="notify_sos_message">Bạn nhận được một thông báo nguy hiểm từ kính [%s].</string>
+    <string name="notify_group_title">Thông báo từ nhóm [%s]!</string>
+    <string name="notify_group_default_message">Bạn nhận được một thông báo mới từ nhóm [%s].</string>
+    <string name="notify_group_add_glasses_message">Một kính vừa được thêm vào nhóm [%s].</string>
+    <string name="notify_group_update_glasses_message">Kính [%s] vừa được cập nhật thông tin.</string>
+    <string name="notify_group_remove_glasses_message">Một kính vừa được gỡ khỏi nhóm [%s].</string>
+    <string name="notify_group_update_message">Nhóm [%s] vừa được cập nhật thông tin.</string>
+    <string name="notify_group_join_message">Một thành viên mới vừa tham gia vào nhóm [%s].</string>
+    <string name="notify_group_quit_message">Một thành viên nhóm [%s] vừa rời khỏi nhóm.</string>
+    <string name="notify_group_change_role_message">Một thành viên nhóm [%s] vừa được thay đổi vai trò.</string>
+    <string name="notify_group_remove_member_message">Một thành viên vừa bị xóa khỏi nhóm [%s].</string>
+    <string name="notify_group_invitation_message">Bạn nhận được một lời đề nghị tham gia nhóm [%s].</string>
+
+    <!--Button String-->
+    <string name="btn_invite_member">Mời</string>
+    <string name="btn_add_glass">Kết nối</string>
+    <string name="btn_view_glass">Xem Kính</string>
+    <string name="btn_sign_up">Đăng Ký</string>
+    <string name="btn_remove_group">Xóa Nhóm</string>
+    <string name="btn_remove_glasses">Xóa Kính</string>
+    <string name="btn_join_group">Tham Gia Nhóm</string>
+    <string name="btn_leave_group">Rời Nhóm</string>
+    <string name="btn_remove">Xóa</string>
+    <string name="btn_create_group">Tạo Nhóm</string>
+    <string name="btn_save_profile">Lưu</string>
+    <string name="btn_sign_in">Đăng Nhập</string>
+    <string name="btn_cancel">Hủy</string>
+    <string name="btn_confirm">Xác nhận</string>
+    <string name="btn_create">Tạo</string>
+    <string name="btn_save">Lưu</string>
+    <string name="btn_yes">Có</string>
+    <string name="btn_no">Không</string>
+    <string name="btn_my_group">Nhóm của tôi</string>
+    <string name="btn_request_join_group">Đợi xác nhận</string>
+    <string name="btn_accept">Chấp nhận</string>
+    <string name="btn_reject">Từ chối</string>
+    <string name="btn_update">Cập nhật</string>
+    <string name="btn_edit">Sửa</string>
+    <string name="btn_add_member">Thêm Thành Viên</string>
+
+    <!--Text-->
+    <string name="tv_role">Vai trò</string>
+    <string name="tv_sign_up_question">Bạn đã có tài khoản?</string>
+    <string name="tv_group_information">Nhóm quản lí</string>
+    <string name="tv_blind_information">Thông tin người mù</string>
+    <string name="tv_user_name">Tên</string>
+    <string name="tv_user_phone">SĐT</string>
+    <string name="tv_role_admin">Quản trị viên</string>
+    <string name="tv_role_member">Thành viên</string>
+    <string name="tv_role_inviting">Đang mời</string>
+    <string name="tv_sign_up">Đăng kí</string>
+    <string name="tv_signin_question">Bạn chưa có tài khoản?</string>
+    <string name="tv_member">Thành viên</string>
+    <string name="tv_edit_profile">Chỉnh sửa thông tin</string>
+    <string name="tv_remove_account">Vô hiệu hóa tài khoản</string>
+    <string name="tv_language">Ngôn ngữ</string>
+    <string name="tv_signout">Đăng xuất</string>
+    <string name="tv_admin_invitation">Quản trị viên: %s</string>
+
+    <string name="tv_glass_name">Tên kính</string>
+    <string name="tv_glass_id">Mã kính</string>
+    <string name="tv_glass_id_">Mã kính #%s</string>
+    <string name="tv_blind_name">Tên người mù</string>
+    <string name="tv_blind_address">Địa chỉ</string>
+    <string name="tv_blind_phone">Năm sinh</string>
+    <string name="tv_notification">Bạn không có thông báo nào!</string>
+    <string name="tv_group">Nhóm:</string>
+    <string name="tv_blind_info">Thông tin người mù:</string>
+    <string name="tv_empty_group">Bạn chưa tham gia vào bất kỳ nhóm nào. Chọn <b>THAM GIA NHÓM</b> hoặc <b>TẠO NHÓM</b> riêng cho bạn.</string>
+    <string name="tv_empty_request_to_join">Không tìm thấy yêu cầu tham gia nhóm nào!</string>
+    <string name="tv_empty_glasses">Không tìm thấy kính nào!</string>
+    <string name="tv_hi">Xin chào,</string>
+    <string name="tv_today">Hôm nay,</string>
+    <string name="tv_camera">Chụp Ảnh</string>
+    <string name="tv_gallery">Thư Viện Ảnh</string>
+    <string name="tv_glasses">Kính</string>
+
+    <!--Hint-->
+    <string name="hint_search_member">Nhập Tên Để Tìm Kiếm…</string>
+    <string name="hint_username">Tên Đăng Nhập</string>
+    <string name="hint_full_name">Tên Đầy Đủ</string>
+    <string name="hint_password">Mật Khẩu</string>
+    <string name="hint_group_name">Nhập Tên Nhóm</string>
+    <string name="hint_re_pass">Nhập Lại Mật Khẩu</string>
+    <string name="hint_glass_id_verify">Nhập Mã Xác Nhận</string>
+    <string name="hint_glass_name">Tên Kính</string>
+    <string name="hint_glass_id">ID Kính</string>
+    <string name="hint_blind_name">Người Sở Hữu</string>
+    <string name="hint_blind_address">Địa Chỉ</string>
+    <string name="hint_blind_age">Năm Sinh</string>
+    <string name="hint_invite_user">Nhập Tên Người Dùng</string>
+
+    <!--Message-->
+    <string name="msg_logout">Bạn có chắc chắn muốn đăng xuất?</string>
+    <string name="msg_login_failed">Tên đăng nhập hoặc mật khẩu không đúng, vui lòng thử lại.</string>
+    <string name="msg_password_invalid_lenght">Mật khẩu phải lớn hơn 8 kí tự</string>
+    <string name="msg_password_invalid_space">Mật khẩu không chứa khoảng trắng</string>
+    <string name="msg_password_invalid">Mật khẩu ít nhất 1 chữ số, 1 chữ cái và một kí tự đặc biệt.</string>
+    <string name="msg_register_name_failed">Tên đăng nhập không hợp lệ</string>
+    <string name="msg_confirm_pass">Mật khẩu không đúng</string>
+    <string name="msg_phone">Số điện thoại ít nhất 10 chữ số</string>
+    <string name="msg_verify_code">Mã xác nhận không hợp lệ</string>
+    <string name="msg_signup_failed">Tên đăng kí đã được sử dụng, vui lòng thử lại!</string>
+    <string name="msg_invitation_success">Lời mời của bạn đã được gửi đi thành công!</string>
+    <string name="msg_remove_member">Bạn có chắc chắn muốn xóa thành viên này?</string>
+    <string name="msg_leave_group">Bạn có chắc chắn muốn rời khỏi nhóm này?</string>
+    <string name="msg_remove_group">Bạn có chắc chắn muốn xóa nhóm này?</string>
+    <string name="msg_delete_glass">Bạn có chắc chắn muốn xóa kính này?</string>
+    <string name="msg_error">Yêu cầu của bạn thực hiện không thành công. Vui lòng thử lại.</string>
+
+    <string name="time_just_now">Ngay bây giờ</string>
+    <string name="time_one_minute_ago">1 phút trước</string>
+    <string name="time_minutes_ago">%s phút trước</string>
+    <string name="time_one_hour_ago">1 giờ trước</string>
+    <string name="time_hours_ago">%s giờ trước</string>
+    <string name="time_yesterday">Hôm qua</string>
+    <string name="time_days_ago">%s ngày trước</string>
+    <string name="time_months_ago">%s tháng trước</string>
+    <string name="time_hour_short">g</string>
+    <string name="time_minute_short">p</string>
+    <!--Welcome-->
+    <string name="title_wel_01">Cho phép bạn theo dõi vị trí của người sử dụng kính</string>
+    <string name="title_wel_02">Cho phép bạn nhận được thông báo SOS khi người sử dụng kính đang trong tình trạng nguy hiểm</string>
+    <string name="title_wel_03">Chào mừng đến ứng dụng của chúng tôi!</string>
+
+    <string name="wel_01">THEO DÕI VỊ TRÍ</string>
+    <string name="wel_02">TÍN HIỆU SOS</string>
+    <string name="wel_03">WELCOME!</string>
+
+</resources>

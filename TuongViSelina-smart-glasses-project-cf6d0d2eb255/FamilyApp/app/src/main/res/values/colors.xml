@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#93CDFA</color>
+    <color name="colorPrimaryDark">#93CDFA</color>
+    <color name="colorAccent">#93CDFA</color>
+    <color name="AccentTint">#BEBAE2F4</color>
+
+    <color name="startGradient">@color/colorAccent</color>
+    <color name="centerGradient">#B5B0E6</color>
+    <color name="endGradient">#D293FF</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="black_light">#41000000</color>
+    <color name="grey">#c2c2c2</color>
+    <color name="grey_dark">#747474</color>
+    <color name="grey_light">#55c2c2c2</color>
+    <color name="blue_white">#2B4EFB</color>
+    <color name="red">#AC170D</color>
+
+    <color name="transparent">#00FFFFFF</color>
+    <color name="marker_color">#7A73B5</color>
+    <color name="marker_color_light">#557A73B5</color>
+
+    <color name="colorError">#e21e00</color>
+    <color name="colorInfo">#41c4f4</color>
+    <color name="colorWarning">#f4a941</color>
+    <color name="colorSuccess">#03bc53</color>
+</resources>
