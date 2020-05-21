@@ -24,6 +24,7 @@
             android:contentDescription="@string/image_of_student"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:setImageByUrl="@{student.image}"
             app:srcCompat="@mipmap/ic_launcher" />
 
         <TextView
@@ -36,7 +37,7 @@
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="8dp"
-            android:text="@string/name_of_student"
+            android:text="@{student.name}"
             android:textSize="28sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/student_age_text"
@@ -54,7 +55,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
-            android:text="@string/age_of_student"
+            android:text="@{student.age}"
             android:textSize="18sp"
             android:textStyle="bold|italic"
             app:layout_constraintBottom_toBottomOf="@+id/student_image"
