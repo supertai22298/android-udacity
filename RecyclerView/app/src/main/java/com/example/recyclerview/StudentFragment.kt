@@ -5,15 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
 import com.example.recyclerview.databinding.FragmentStudentBinding
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.fragment.findNavController
 
 class StudentFragment : Fragment() {
 
     private val viewModel: StudentViewModel by lazy {
-        ViewModelProviders.of(this).get(StudentViewModel::class.java)
+        ViewModelProvider(this).get(StudentViewModel::class.java)
     }
 
     override fun onCreateView(
@@ -28,7 +27,9 @@ class StudentFragment : Fragment() {
 
         binding.viewModel = viewModel
 
-        binding.studentRecyclerView.adapter = StudentAdapter()
+        binding.studentRecyclerView.adapter = StudentAdapter(OnClickListener { 
+            this.findNavController().navigate(StudentFragmentDirections.actionStudentFragmentToStudentDetail())
+        })
 
         return binding.root
     }

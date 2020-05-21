@@ -6,8 +6,18 @@
     app:startDestination="@id/studentFragment">
 
     <fragment
-        android:id="@+id/studentFragment"
+            android:id="@+id/studentFragment"
         android:name="com.example.recyclerview.StudentFragment"
         android:label="fragment_student"
-        tools:layout="@layout/fragment_student" />
+        tools:layout="@layout/fragment_student">
+        <action
+            android:id="@+id/action_studentFragment_to_studentDetail"
+            app:destination="@id/studentDetail"
+            app:enterAnim="@android:anim/slide_in_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentDetail"
+        android:name="com.example.recyclerview.StudentDetail"
+        android:label="student_detail_fragment"
+        tools:layout="@layout/student_detail_fragment" />
 </navigation>
