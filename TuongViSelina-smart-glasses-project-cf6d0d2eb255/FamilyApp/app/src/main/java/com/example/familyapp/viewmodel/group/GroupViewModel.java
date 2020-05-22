@@ -19,6 +19,7 @@ import java.util.ArrayList;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
+
 import io.reactivex.SingleObserver;
 import io.reactivex.SingleSource;
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -163,7 +164,7 @@ public class GroupViewModel extends BaseViewModel implements IGroupViewModel {
         Group group = _myRequestGroup.getValue();
         if (group != null && glasses != null) {
             ArrayList<Glasses> list = new ArrayList<>();
-            for (int i = 0; i < glasses.size(); i ++) {
+            for (int i = 0; i < glasses.size(); i++) {
                 if (glasses.get(i).getGroup().getId().equals(group.getId())) {
                     list.add(glasses.get(i));
                 }
@@ -177,7 +178,7 @@ public class GroupViewModel extends BaseViewModel implements IGroupViewModel {
         ArrayList<Group> groups = _myGroups.getValue();
         if (groups != null && !groups.isEmpty()) {
             int index = -1;
-            for (int i = 0; i < groups.size(); i ++) {
+            for (int i = 0; i < groups.size(); i++) {
                 if (groups.get(i).getId().equals(groupID)) {
                     index = i;
                     break;
@@ -193,7 +194,7 @@ public class GroupViewModel extends BaseViewModel implements IGroupViewModel {
     @Override
     public void getGroups(int type) {
         new ResponseHandler<ArrayList<Group>>(this).setRequest(
-                type == GroupAdapter.MY_GROUP ? repository.getGroups(): repository.getInvitations(),
+                type == GroupAdapter.MY_GROUP ? repository.getGroups() : repository.getInvitations(),
                 new ResponseHandlerListener<ArrayList<Group>>() {
                     @Override
                     public void onSuccess(BaseResponse<ArrayList<Group>> response) {
@@ -210,11 +211,11 @@ public class GroupViewModel extends BaseViewModel implements IGroupViewModel {
     @Override
     public void createGroup(final String groupID, final String groupName) {
         new ResponseHandler<CreateGroupResponse>(this).setRequest(
-                        groupID != null ? repository.updateGroup(groupID, groupName) : repository.createGroup(groupName),
-                        new ResponseHandlerListener<CreateGroupResponse>() {
+                groupID != null ? repository.updateGroup(groupID, groupName) : repository.createGroup(groupName),
+                new ResponseHandlerListener<CreateGroupResponse>() {
                     @Override
                     public void onSuccess(BaseResponse<CreateGroupResponse> response) {
-                        Group group = new Group(groupID != null ? groupID: response.getData().getGroupID(), groupName, 1);
+                        Group group = new Group(groupID != null ? groupID : response.getData().getGroupID(), groupName, 1);
                         _myRequestGroup.postValue(group);
                     }
 
@@ -315,9 +316,10 @@ public class GroupViewModel extends BaseViewModel implements IGroupViewModel {
                 ArrayList<Member> members = group.getMembers();
                 if (members != null && !members.isEmpty()) {
                     int index = -1;
-                    for (int i = 0; i < members.size(); i ++) {
+                    for (int i = 0; i < members.size(); i++) {
                         if (members.get(i).getId().equals(memberID)) {
-                            index = i; break;
+                            index = i;
+                            break;
                         }
                     }
                     if (index != -1) {
@@ -367,7 +369,7 @@ public class GroupViewModel extends BaseViewModel implements IGroupViewModel {
             if (group != null) {
                 ArrayList<Member> members = group.getMembers();
                 if (members != null && !members.isEmpty()) {
-                    for (int i = 0; i < members.size(); i ++) {
+                    for (int i = 0; i < members.size(); i++) {
                         if (members.get(i).getId().equals(memberID)) {
                             members.get(i).setRole(role);
                             _myRequestGroup.postValue(group);
