@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/menuCamera"
+        android:icon="@drawable/ic_camera_white_40dp"
+        android:title="Camera"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menuGame"
+        android:icon="@drawable/ic_games_white_40dp"
+        android:title="Game"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menuComputer"
+        android:icon="@drawable/ic_important_devices_white_40dp"
+        android:title="Computer"
+        app:showAsAction="ifRoom" />
+</menu>

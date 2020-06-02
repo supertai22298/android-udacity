@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".yourplan.YourPlanFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/title_your_plan_text"
+            style="@style/GetStartedText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/your_plan_title"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:textSize="24sp" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/bg_your_plan"
+            app:layout_constraintTop_toBottomOf="@id/title_your_plan_text">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/selected_clean_text"
+                    style="@style/title_your_plan_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/selected_cleaning"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/initial_cleaning_button"
+                    style="@style/btn_image_your_plan"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/ic_wb_sunny_white_90dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/selected_clean_text" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView"
+                    style="@style/title_your_plan_text.smallerText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/initial_cleaning"
+                    app:layout_constraintEnd_toEndOf="@+id/initial_cleaning_button"
+                    app:layout_constraintHorizontal_bias="0.517"
+                    app:layout_constraintStart_toStartOf="@+id/initial_cleaning_button"
+                    app:layout_constraintTop_toBottomOf="@+id/initial_cleaning_button" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/upkeep_cleaning_button"
+                    style="@style/btn_image_your_plan"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:src="@drawable/ic_brightness_2_white_90dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/initial_cleaning_button"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/initial_cleaning_button"
+                    app:layout_constraintTop_toTopOf="@+id/initial_cleaning_button" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView2"
+                    style="@style/title_your_plan_text.smallerText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/upkeep_cleaning"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/appCompatTextView"
+                    app:layout_constraintEnd_toEndOf="@+id/upkeep_cleaning_button"
+                    app:layout_constraintStart_toStartOf="@+id/upkeep_cleaning_button" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView3"
+                    style="@style/title_your_plan_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/selected_frequency"
+                    app:layout_constraintStart_toStartOf="@+id/selected_clean_text"
+                    app:layout_constraintTop_toBottomOf="@+id/appCompatTextView2" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView4"
+                    style="@style/title_your_plan_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/select_extras"
+                    app:layout_constraintStart_toStartOf="@+id/appCompatTextView3"
+                    app:layout_constraintTop_toBottomOf="@+id/weekly_button" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/weekly_button"
+                    style="@style/btn_frequency_your_plan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/weekly"
+                    app:layout_constraintEnd_toStartOf="@+id/bi_weekly_button"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/appCompatTextView3" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/bi_weekly_button"
+                    style="@style/btn_frequency_your_plan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:text="@string/bi_weekly"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/weekly_button"
+                    app:layout_constraintEnd_toStartOf="@+id/monthly_button"
+                    app:layout_constraintStart_toEndOf="@+id/weekly_button" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/monthly_button"
+                    style="@style/btn_frequency_your_plan.selected"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="@string/monthly"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/bi_weekly_button"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/company_button"
+                    style="@style/btn_selected_extras"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:src="@drawable/ic_business_white"
+                    app:layout_constraintStart_toStartOf="@+id/appCompatTextView4"
+                    app:layout_constraintTop_toBottomOf="@+id/appCompatTextView4" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/inside_fridge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:text="@string/inside_fridge"
+                    app:layout_constraintEnd_toEndOf="@id/company_button"
+                    app:layout_constraintStart_toStartOf="@id/company_button"
+                    app:layout_constraintTop_toBottomOf="@id/company_button" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/button5"
+                    style="@style/btn_selected_extras"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:src="@drawable/ic_camera_white_40dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/company_button"
+                    app:layout_constraintEnd_toStartOf="@+id/button6"
+                    app:layout_constraintHorizontal_bias="0.322"
+                    app:layout_constraintStart_toEndOf="@id/company_button"
+                    app:layout_constraintTop_toTopOf="@+id/company_button"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:text="@string/inside_fridge"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/inside_fridge"
+                    app:layout_constraintEnd_toEndOf="@id/button5"
+                    app:layout_constraintStart_toStartOf="@id/button5"
+                    app:layout_constraintTop_toBottomOf="@id/button5" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/button6"
+                    style="@style/btn_selected_extras"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/button5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/button5"
+                    app:layout_constraintVertical_bias="1.0"
+                    android:src="@drawable/ic_games_white_40dp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:text="@string/inside_fridge"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/inside_fridge"
+                    app:layout_constraintEnd_toEndOf="@id/button6"
+                    app:layout_constraintStart_toStartOf="@id/button6"
+                    app:layout_constraintTop_toBottomOf="@id/button6" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/button7"
+                    style="@style/btn_selected_extras"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    app:layout_constraintEnd_toEndOf="@+id/company_button"
+                    app:layout_constraintStart_toStartOf="@+id/company_button"
+                    app:layout_constraintTop_toBottomOf="@+id/inside_fridge"
+                    android:src="@drawable/ic_important_devices_white_40dp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/patio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:text="@string/inside_fridge"
+                    app:layout_constraintEnd_toEndOf="@id/button7"
+                    app:layout_constraintStart_toStartOf="@id/button7"
+                    app:layout_constraintTop_toBottomOf="@id/button7" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/button8"
+                    style="@style/btn_selected_extras"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/button7"
+                    app:layout_constraintEnd_toEndOf="@+id/button5"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/button5"
+                    app:layout_constraintTop_toTopOf="@+id/button7"
+                    app:layout_constraintVertical_bias="1.0"
+                    android:src="@drawable/ic_watch_white_40dp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:text="@string/inside_fridge"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/patio"
+                    app:layout_constraintEnd_toEndOf="@id/button5"
+                    app:layout_constraintStart_toStartOf="@id/button8"
+                    app:layout_constraintTop_toBottomOf="@id/button8" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/button9"
+                    style="@style/btn_selected_extras"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/button8"
+                    app:layout_constraintEnd_toEndOf="@+id/button6"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/button6"
+                    app:layout_constraintTop_toTopOf="@+id/button8"
+                    app:layout_constraintVertical_bias="1.0"
+                    android:src="@drawable/ic_whatshot_white_40dp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:text="@string/inside_fridge"
+                    app:layout_constraintEnd_toEndOf="@id/button6"
+                    app:layout_constraintStart_toStartOf="@id/button9"
+                    app:layout_constraintTop_toBottomOf="@id/button9" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</layout>

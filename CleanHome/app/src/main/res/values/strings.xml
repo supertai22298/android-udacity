@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">CleanHome</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="slogan_primary">Clean Home Clean Life.</string>
+    <string name="slogan_secondary">Book Cleaners at the Comfort of you home.</string>
+    <string name="brand_name">Vacuum Null</string>
+    <string name="btn_get_started">Get Started</string>
+    <string name="your_plan_title">Your Plan</string>
+    <string name="selected_cleaning">Selected Cleaning</string>
+    <string name="initial_cleaning">Initial Cleaning</string>
+    <string name="upkeep_cleaning">Upkeep Cleaning</string>
+    <string name="selected_frequency">Selected Frequency</string>
+    <string name="bi_weekly">Bi-weekly</string>
+    <string name="monthly">Monthly</string>
+    <string name="select_extras">Select Extras</string>
+    <string name="weekly">Weekly</string>
+    <string name="inside_fridge">Inside Fridge</string>
+</resources>
